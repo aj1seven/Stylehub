@@ -6,13 +6,6 @@
 
 StyleHub is a full-stack, containerized e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js). It features a modern, responsive user interface and role-based functionality for customers, sellers, and is designed to scale with future admin capabilities.
 
-## Live Demo
-
-- **Frontend**: [https://stylehub-frontend.onrender.com](https://stylehub-frontend.onrender.com)
-- **Backend API**: [https://stylehub-backend-t6g5.onrender.com](https://stylehub-backend-t6g5.onrender.com)
-- **GitHub Repository**: [https://github.com/aj1seven/Stylehub](https://github.com/aj1seven/Stylehub)
-
-
 ## Table of Contents
 - [Features](#features)
 - [Technology Stack](#technology-stack)
@@ -161,7 +154,13 @@ MERN-Ecommerce-Site/
 │   └── nginx/             # Nginx configuration
 ├── docker-compose.yml     # Docker compose configuration
 └── README.md             # Project documentation
+
 ```
+## Live Demo
+
+- **Frontend**: [https://stylehub-frontend.onrender.com](https://stylehub-frontend.onrender.com)
+- **Backend API**: [https://stylehub-backend-t6g5.onrender.com](https://stylehub-backend-t6g5.onrender.com)
+- **GitHub Repository**: [https://github.com/aj1seven/Stylehub](https://github.com/aj1seven/Stylehub)
 
 ## License
 
