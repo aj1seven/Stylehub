@@ -95,27 +95,29 @@ JWT_SECRET=your_strong_jwt_secret_here
 COOKIE_SECURE=false # Set to true in production
 ```
 
+---
+
 ## Deployment
 
-### Backend Deployment(Render)
+### Backend Deployment (Render)
 
-1.Log in to your Render account
-2.Create a new Web Service and connect your backend GitHub repository
-3.Select "Docker" as the environment
-4.Add the required environment variables:
-     • PORT
-     • MONGODB_URL
-     • JWT_SECRET
-     • NODE_ENV=production
-5.Deploy the Service
+1. Log in to your [Render](https://render.com) account.
+2. Create a new **Web Service** and connect your backend GitHub repository.
+3. Select **Docker** as the environment.
+4. Add the required environment variables in the Render dashboard:
+   - `PORT`
+   - `MONGODB_URL`
+   - `JWT_SECRET`
+   - `NODE_ENV=production`
+5. Deploy the service and wait for it to build and go live.
 
-### Frontend Deployment(Render)
+### Frontend Deployment (Render)
 
-1.Create another Web Service for the frontend
-2.Connect the frontend GitHub repository
-3.Use the Dockerfile provided in the frontend/ directory
-4.Configure Nginx settings as needed
-5.Update the API base URL in frontend/src/api/axiosInstance.js:
+1. Create another **Web Service** for the frontend.
+2. Connect your frontend GitHub repository.
+3. Use the `Dockerfile` provided in the `frontend/` directory.
+4. Configure **Nginx** settings as needed (see `frontend/nginx/`).
+5. Update the API base URL in `frontend/src/api/axiosInstance.js`:
 
 ```bash 
 const instance = axios.create({
