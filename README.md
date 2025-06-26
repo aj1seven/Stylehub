@@ -70,7 +70,7 @@ StyleHub is a full-stack, containerized e-commerce platform built with the MERN 
 - Docker Compose (v2.0+ recommended)
 - Node.js (v16+ recommended) - for local development without Docker
 
-##Runnig with Docker
+## Runnig with Docker
 
 ```bash
 # Backend setup
