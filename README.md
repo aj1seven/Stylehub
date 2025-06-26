@@ -70,17 +70,94 @@ StyleHub is a full-stack, containerized e-commerce platform built with the MERN 
 - Docker Compose (v2.0+ recommended)
 - Node.js (v16+ recommended) - for local development without Docker
 
-### Running with Docker (Recommended)
+##Runnig with Docker
+
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/StyleHub.git
+# Backend setup
+cd backend
+npm install
+npm run dev
 
-# Navigate to project directory
-cd StyleHub
+# Frontend setup (in another terminal)
+cd frontend
+npm install
+npm start
+```
+##Configuration
 
-# Build and start containers
-docker-compose up --build
+Environment Variables
+Create a .env file in the backend/ directory with the following variables:
 
-# The application will be available at:
-# Frontend: http://localhost:3000
-# Backend: http://localhost:5001
+```bash
+PORT=5001
+MONGODB_URI=mongodb://localhost:27017/stylehub
+JWT_SECRET=your_strong_jwt_secret_here
+COOKIE_SECURE=false # Set to true in production
+```
+
+##Deployment
+
+###Backend Deployment(Render)
+
+1.Log in to your Render account
+2.Create a new Web Service and connect your backend GitHub repository
+3.Select "Docker" as the environment
+4.Add the required environment variables:
+     • PORT
+     • MONGODB_URL
+     • JWT_SECRET
+     • NODE_ENV=production
+5.Deploy the Service
+
+###Frontend Deployment(Render)
+
+1.Create another Web Service for the frontend
+2.Connect the frontend GitHub repository
+3.Use the Dockerfile provided in the frontend/ directory
+4.Configure Nginx settings as needed
+5.Update the API base URL in frontend/src/api/axiosInstance.js:
+
+```bash 
+const instance = axios.create({
+  baseURL: 'https://your-backend-service.onrender.com',
+  withCredentials: true,
+});
+```
+
+##Folder Structure
+
+```bash
+MERN-Ecommerce-Site/
+├── backend/
+│   ├── controllers/       # Route controllers
+│   ├── middlewares/       # Authentication and other middlewares
+│   ├── models/            # MongoDB models
+│   ├── routes/            # API routes
+│   ├── utils/             # Utility functions
+│   ├── index.js           # Main server file
+│   ├── Dockerfile         # Backend Docker configuration
+│   └── .env.example       # Environment variables template
+├── frontend/
+│   ├── public/            # Static assets
+│   ├── src/
+│   │   ├── api/           # API configuration
+│   │   ├── components/    # React components
+│   │   ├── pages/         # Page components
+│   │   ├── store/         # Redux store (if used)
+│   │   ├── styles/        # Global styles
+│   │   ├── App.js         # Main App component
+│   │   └── index.js       # Entry point
+│   ├── Dockerfile         # Frontend Docker configuration
+│   ├── .dockerignore      # Docker ignore file
+│   └── nginx/             # Nginx configuration
+├── docker-compose.yml     # Docker compose configuration
+└── README.md             # Project documentation
+```
+
+##License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+      
+
+
+
