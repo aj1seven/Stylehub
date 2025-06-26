@@ -83,7 +83,7 @@ cd frontend
 npm install
 npm start
 ```
-##Configuration
+## Configuration
 
 Environment Variables
 Create a .env file in the backend/ directory with the following variables:
@@ -95,9 +95,9 @@ JWT_SECRET=your_strong_jwt_secret_here
 COOKIE_SECURE=false # Set to true in production
 ```
 
-##Deployment
+## Deployment
 
-###Backend Deployment(Render)
+### Backend Deployment(Render)
 
 1.Log in to your Render account
 2.Create a new Web Service and connect your backend GitHub repository
@@ -109,7 +109,7 @@ COOKIE_SECURE=false # Set to true in production
      • NODE_ENV=production
 5.Deploy the Service
 
-###Frontend Deployment(Render)
+### Frontend Deployment(Render)
 
 1.Create another Web Service for the frontend
 2.Connect the frontend GitHub repository
@@ -124,7 +124,7 @@ const instance = axios.create({
 });
 ```
 
-##Folder Structure
+## Folder Structure
 
 ```bash
 MERN-Ecommerce-Site/
@@ -154,7 +154,7 @@ MERN-Ecommerce-Site/
 └── README.md             # Project documentation
 ```
 
-##License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
       
